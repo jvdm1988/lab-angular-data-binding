@@ -1,4 +1,12 @@
+
 <section class="search-pipe">
+
   <label for="food-search"> Search your favorite food </label>
   <input  id="food-search" type="search" [(ngModel)]="foodSearchText">
+
+  <ul>
+    <li *ngFor="let oneFood of (foods | search:foodSearchText)">
+      <h3> {{oneFood.name}} </h3>
+    </li>
+  </ul>
 </section>
