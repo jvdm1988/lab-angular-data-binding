@@ -1,1 +1,82 @@
+section {
+  background-color: #F2F7FF;
+  font-family: sans-serif;
+  font-weight: lighter;
+}
 
+.food-search-box {
+  text-align: center;
+}
+
+.food-search-box label {
+  margin: 20px;
+  font-size: 32px;
+}
+
+.food-search-box input {
+  width: 300px;
+}
+
+.addButton {
+  margin: 30px;
+  margin-left: 545px;
+  width: 170px;
+  height: 40px;
+}
+
+.food-box img {
+  height: 190px;
+  width: 250px;
+}
+
+.food-box {
+  display: inline-block;
+  border: 1px solid black;
+  margin: 20px;
+  text-align: center;
+  background-color: white;
+}
+
+.todaysButton {
+ margin: 20px;
+ width: 160px;
+ height: 30px;
+}
+
+h1 {
+  text-align: center;
+  margin: 40px;
+  font-size: 32px;
+}
+
+hr {
+  width: 1000px;
+}
+
+button {
+  background-color: #85C8DD;
+  border-radius: 4px;
+}
+
+.columnHeader {
+  color: #85C8DD;
+}
+
+.form-box {
+  border: 1px solid black;
+  text-align: center;
+  border-radius: 2px;
+  background-color: white;
+  width: 400px;
+  height: 350px;
+  margin-left: 420px;
+}
+
+.form-box input {
+  width: 200px;
+  height: 20px;
+}
+
+.form-box button {
+  width: 200px;
+}

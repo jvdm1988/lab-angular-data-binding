@@ -1,12 +1,69 @@
-
 <section class="search-pipe">
 
-  <label for="food-search"> Search your favorite food </label>
-  <input  id="food-search" type="search" [(ngModel)]="foodSearchText">
+  <br>
+  <br>
+
+  <div class="food-search-box">
+    <label for="food-search"> Search your favorite food: </label>
+    <br> <br>
+    <input id="food-search" type="search" [(ngModel)]="foodSearchText" placeholder="Search...">
+    <br>
+  </div>
+  <br>
+
+  <hr>
+
+  <button class="addButton" (click)="showFormFunction()"> Add a new food item </button>
+
+
+  <form *ngIf="showForm">
+    <div class="form-box">
+      <br>
+      <h3> Add a new food item </h3>
+      <br>
+      <label for="food-name-input"> Name </label>
+      <br>
+
+      <input id="food-name-input" name="foodName" placeholder="For example Pizza">
+      <br>
+      <br>
+      <label for="calorie-input"> Calories </label>
+      <br>
+
+      <input id="calorie-input" name="foodCalorie" placeholder="For example 700 cal">
+      <br>
+      <br>
+      <label for="image-input"> Image </label>
+      <br>
+      <input type="text" name="foodImage" value="">
+      <br>
+      <br>
+      <button> Add </button>
+    </div>
+    <br>
+    <br>
+    <hr>
+  </form>
 
   <ul>
-    <li *ngFor="let oneFood of (foods | search:foodSearchText)">
+    <li class="food-box" *ngFor="let oneFood of (foods | search:foodSearchText)">
       <h3> {{oneFood.name}} </h3>
+      <h4> Calories: {{oneFood.calories}} </h4>
+      <img [src]="oneFood.image">
+      <br>
+      <button class="todaysButton" (click)="todaysFoodsFunction()"> Add to Todays Foods </button>
     </li>
   </ul>
+  <hr>
+
+  <h1> Today's foods and calories: {{totalCal}} </h1>
+
+<ul>
+  <li *ngFor="let oneFood of todayArray">
+    <h3> {{oneFood.name}} </h3>
+    <h4> Calories: {{oneFood.calories}} </h4>
+    <img [src]="oneFood.image">
+  </li>
+</ul>
+
 </section>
